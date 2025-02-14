@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy birthday pookie</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Cursive;
+            background-image: url(images/normal.png);
+            background-position: center 15%;
+            background-size: cover;
+            padding: 50px;
+        }
+        #image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 15px;
+            background-color: #776864;
+            color: #fbfbe3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #dcb994;
+        }
+
+        h1 {
+            font-size: 35px;
+            color: #876553;
+            font-weight: bold;
+            text-shadow: -2px -2px 0 #c4ab9b, 2px -2px 0 #c4ab9b, -2px 2px 0 #c4ab9b, 2px 2px 0 #c4ab9b;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">hi! this is a digital birthday letter for you ^o^</h1>
+    <div id="image-container">
+        <img id="image" src="images/silly8.png" alt="₍ᐢ. .ᐢ₎">
+
+    </div>
+    <button onclick="changeImageText()">𐙚🧸ྀི</button>
+    <br>
+    <button onclick="nextPage()">next>⩊<</button>
+
+    <script>
+        let toggle = false;
+        function changeImageText() {
+            let image = document.getElementById("image");
+            let text = document.getElementById("text");
+
+            if (!toggle) {
+                image.src = "images/silly6.png";
+                text.innerText = "since you are sick and we can't meet up";
+            } else {
+                image.src = "images/silly3.png";
+                text.innerText = "here's a silly little gift for youᓚ₍⑅^..^₎♡";
+            }
+            toggle = !toggle;
+        }
+
+        function nextPage() {
+            window.location.href = "page2.html";
+        }
+    </script>
+</body>
+</html>
